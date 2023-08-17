@@ -1,5 +1,5 @@
-from parser import parse
+from parseer import parsee
 
 
 if __name__ == '__main__':
-    parse('./challenge/ops.json', 0)
+    parsee('./challenge/ops.json', 0)

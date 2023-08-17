@@ -92,7 +92,7 @@ def recursive_fmt(res, fmt):
     return fmt(res)
 
 
-def parse(file, start):
+def parsee(file, start):
     ops = stream_array(tokenize(open(file)))
     for _ in range(start):
         next(ops)

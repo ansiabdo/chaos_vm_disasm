@@ -14,13 +14,7 @@ var __TENCENT_CHAOS_STACK = function () {
         current = +current, opcode = opcode || [0];
         stack = stack || [[this], [{}]];
         let cmds = {
-            0: function () { 
-                var C = [];
-            for (var L in stack.pop())
-                C.push(L);
-            stack.push(C)
-            //    var C = stack.pop(); stack.push(C[0][C[1]]) 
-            },
+            0: function () { var C = stack.pop(); stack.push(C[0][C[1]]) },
             1: function () { stack[stack[stack.length - 2][0]][0] = stack[stack.length - 1] },
             2: function () { stack[stack.length - 2] = stack[stack.length - 2] << stack.pop() },
             3: function () { stack.push(typeof stack.pop()) },
